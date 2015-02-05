@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.perkusista"
     android:versionCode="1"
-    android:versionName="1.0.1" >
+    android:versionName="1.0.8.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
 		android:theme="@android:style/Theme.NoTitleBar"
         >
@@ -17,12 +18,23 @@
             android:name=".Perkusista"
 			android:screenOrientation="landscape"
             android:label="@string/app_name" >
-            <intent-filter>
+			  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
         </activity>
+        <activity android:name="com.example.perkusista.MetronomActivity"
+            android:label="@string/title_activity_metronom"
+            android:parentActivityName="com.example.perkusista.Perkusista">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.perkusista.Perkusista" />
+        </activity>
+        
+
     </application>
 
 </manifest>
+
+
